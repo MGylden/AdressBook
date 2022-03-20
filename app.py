@@ -218,7 +218,7 @@ class FlaskThreadWithException(threading.Thread):
         self.name = name
 
     def run(self):
-        # target function of the thread class
+        # Koden der skal køres i den instantierede Thread Objekt
         try:
             while True:
                 app.run(host='0.0.0.0', port=9000,
@@ -227,7 +227,7 @@ class FlaskThreadWithException(threading.Thread):
             print('ended')
 
     def get_id(self):
-        # returns id of the respective thread
+        # returnere objektet's Thread ID.
         if hasattr(self, '_thread_id'):
             return self._thread_id
         for id, thread in threading._active.items():
@@ -241,12 +241,6 @@ class FlaskThreadWithException(threading.Thread):
         if res > 1:
             ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id, 0)
             print('Exception raise failure')
-
-
-def runFlaskApp():
-    # Starter "app.run(..)" som en thread. reloader = false da det ikke understøtter threading ud af boksen.
-    threading.Thread(target=lambda: app.run(
-        host='0.0.0.0', port=9000, debug=True, use_reloader=False), name="flaskThread").start()
 
 
 # #Definere objekter med data og smider dem i en samlet liste nederst
@@ -264,7 +258,6 @@ def index():
 
 def main():
     choice = ""
-    # runFlaskApp()
     flaskThread = FlaskThreadWithException("FlaskThread")
     flaskThread.start()
     # Da ovenstående er en thread, forstætter den før at Flask webservicen
