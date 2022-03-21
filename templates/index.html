@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bilforhandler</title>
+    <title>Adressebog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <h1>Kunder</h1>
+        <h1>Kunde liste</h1>
       
 
         <table id="data" class="table table-striped">
@@ -34,7 +34,7 @@
                   <td>{{ c.contactName }}</td>
                   <td>{{ c.contactPhone }}</td>
                   <td>{{ c.contactEmail }}</td>
-                  <td>{{ c.contactJobTitel }}</td>
+                  <td>{{ c.contactJobTitle }}</td>
                 </tr>
               {% endfor %}
             </tbody>
