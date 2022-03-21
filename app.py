@@ -194,7 +194,8 @@ def deleteCustomer():
             writer.writeheader()
 
             for row in reader:
-                if customerId in row["customerId"]:
+                if customerId == row["customerId"]:
+                    time.sleep(2)
                     print("Kunden er fundet og slettet.")
                     foundCustomer = True
                     continue
