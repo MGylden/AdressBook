@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Bilforhandler</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container">
-        <h1>Kunder</h1>
-      
 
-        <table id="data" class="table table-striped">
-            <thead>
-              <tr>
-                <th>KundeID</th>
-                <th>Navn</th>
-                <th>Telefon Nummer</th>
-                <th>E-Mail</th>
-                <th>Adresse</th>
-                <th>Kontaktpersons Navn</th>
-                <th>Kontaktpersons Telefon Nummer</th>
-                <th>Kontaktpersons E-Mail</th>
-                <th>Kontaktpersons Job Titel</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for c in customers %}
-                <tr>
-                  <td>{{ c.customerId }}</td>
-                  <td>{{ c.name }}</td>
-                  <td>{{ c.phone }}</td>
-                  <td>{{ c.email }}</td>
-                  <td>{{ c.adress }}</td>
-                  <td>{{ c.contactName }}</td>
-                  <td>{{ c.contactPhone }}</td>
-                  <td>{{ c.contactEmail }}</td>
-                  <td>{{ c.contactJobTitel }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-    </div>
+<head>
+  <title>Bilforhandler</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Kunder</h1>
+
+
+    <table id="data" class="table table-striped">
+      <thead>
+        <tr>
+          <th>KundeID</th>
+          <th>Navn</th>
+          <th>Telefon Nummer</th>
+          <th>E-Mail</th>
+          <th>Adresse</th>
+          <th>Kontaktpersons Navn</th>
+          <th>Kontaktpersons Telefon Nummer</th>
+          <th>Kontaktpersons E-Mail</th>
+          <th>Kontaktpersons Job Title</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in customers %}
+        <tr>
+          <td>{{ c.customerId }}</td>
+          <td>{{ c.name }}</td>
+          <td>{{ c.phone }}</td>
+          <td>{{ c.email }}</td>
+          <td>{{ c.adress }}</td>
+          <td>{{ c.contactName }}</td>
+          <td>{{ c.contactPhone }}</td>
+          <td>{{ c.contactEmail }}</td>
+          <td>{{ c.contactJobTitle }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </body>
+
 </html>
