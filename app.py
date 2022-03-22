@@ -1,5 +1,4 @@
 import shutil
-import pandas as pd
 import csv
 from flask import Flask, app, render_template
 
@@ -216,7 +215,7 @@ def deleteCustomer():
             writer.writeheader()
 
             for row in reader:
-                if customerId in row["customerId"]:
+                if customerId == row["customerId"]:
                     print("Kunden er fundet og slettet.")
                     foundCustomer = True
                     continue
