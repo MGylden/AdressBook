@@ -5,6 +5,7 @@ from flask import Flask, app, render_template
 
 """
 Customer er blueprintet/manualen til objektet. 
+- Self er objektet 
 """
 class Customer:
     def __init__(self, customerId, name, phone, email, adress, contactName, contactPhone, contactEmail, contactJobTitle) :
@@ -32,6 +33,17 @@ class Customer:
         print("Kontakt E-Mail: " + self.contactEmail)
         print("Kontakts Stilling: " + self.contactJobTitle)
 
+# For at bevise at vi ikke behøver klasser i lige netop vores program på nuværende tidspunkt.
+# def printToString(customerId, name, phone, email, adress, contactName, contactPhone, contactEmail, contactJobTitle):
+#         print("Kunde ID: " + customerId)
+#         print("Kunde Navn: " + name)
+#         print("Kunde Telefon: " + phone)
+#         print("Kunde Email: " + email)
+#         print("Kunde Adresse: " + adress)
+#         print("Kontakt Navn: " + contactName)
+#         print("Kontakt Tlf Nummer: " + contactPhone)
+#         print("Kontakt E-Mail: " + contactEmail)
+#         print("Kontakts Stilling: " + contactJobTitle)
 """
 Først definere vi funktionen getCustomers
 Herefter opretter vi en liste customerList = []
@@ -49,6 +61,7 @@ def getCustomers():
             for row in reader:
                 customer = Customer(row["customerId"], row["name"], row["phone"], row["email"], row["adress"], row["contactName"], row["contactPhone"], row["contactEmail"], row["contactJobTitle"])
                 customerList.append(customer)
+                # printToString(row["customerId"], row["name"], row["phone"], row["email"], row["adress"], row["contactName"], row["contactPhone"], row["contactEmail"], row["contactJobTitle"])
             file.close()
         for customer in customerList:
             print(customer.printToString())
@@ -186,7 +199,7 @@ def updateCustomer():
         print("House is on fire.." + Exception)
 
 """
-Først definere vi metoden/funktionen deleteCustomer, herefter printer vi 
+Først definere vi funktionen deleteCustomer, herefter printer vi 
 Derefter opretter vi en variabel som vi kalder customerId, som får vi input fra brugeren
 Herefter opretter vi endnu en variabel "fields" som indeholder vores headers vi indlæser i "writer (fieldnames=fields)
 Herefter laver vi en boolean som vi kalder foundCustomer og sætter den til false da vi ikke den ikke vil kunne finde noget- den går så ind i vores for loop og tjekker om det "true", 
