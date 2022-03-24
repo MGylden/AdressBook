@@ -1,7 +1,5 @@
 customerId;name;phone;email;adress;contactName;contactPhone;contactEmail;contactJobTitle
-1;Lego;21212121;lego@lego.dk;legovej 42, Billund;Mads;23232323;mads@lego.dk;CTO
-2;Vestas;11111111;vestas@vestas.dk;fuckdig2;J�rgen;23232523;jorgen@vestas.dk;CFO
-4;Microsoft;2121212321;l23ego@lego.dk;lego4vej 42, Billund;Mads;23232323;mads@lego.dk;jajajajaja
-5;Lego;21212121;leg23o@le2go.dk;lego3vej 42, Billund;Mads;23232323;mads@lego.dk;CTO
-7;Lego;21212121;le23go@lego.dk;legov1ej 42, Billund;Mads;23232323;mads@lego.dk;CTO
-9;Lego;2122312121;lego@lego.dk;legov1ej 42, Billund;Mads;23232323;mads@lego.dk;CTO
+1;KEA;46460000;kea@kea.dk;Guldbergsgade 29N, 2200 Copenhagen;Peter Askov;46460421;studievejledning@kea.dk;Studievejleder
+2;Vestas;11111111;vestas@vestas.dk;vestasvej 2;Jens;23232523;Jens@vestas.dk;CFO
+4;Microsoft;2121212321;microsoft@microsoft.com;Redmond, Washington, USA;Bill Gates;11001100;bill@microsoft.com;CEO
+5;Lego;21212121;lego@lego.dk;legovej 42, Billund;Mads;23232323;mads@lego.dk;CTO
